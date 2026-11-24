@@ -71,4 +71,10 @@ Adversarial case records also require a `technique` string. Edge cases use `edge
 - **Local app runs.** The app starts with an empty evidence store. It saves records and exports under the ignored `test-data/local/` directory.
 - **Automated tests.** Pytest uses synthetic fixtures and temporary storage to verify application behavior. Live model behavior requires separate evidence.
 
+### College chatbot before-and-after results
+
+On 2026-11-24, the team recorded matched Baseline V1 and Updated V2 responses for three regular queries and three edge cases using GPT-6.2 in ChatGPT manual. Each version recorded **6 PASS, 0 FAIL, 0 UNCERTAIN, and a 100% pass rate (6/6)**. The updated replies more explicitly qualified institution-specific information and avoided assumptions about scholarship status and overnight lab access. The updated admissions reply retained a citation presentation issue. The sample supports a response-quality comparison. Security effectiveness was outside this evaluation.
+
+See the [final methodology and six-case results](docs/milestone-2.md#college-chatbot-evidence-verification), [sanitized comparison CSV](docs/evidence/college-chatbot-comparison.csv), and [quality verification and official sources](docs/evidence/quality-verification.md). The [comparison screenshot](docs/evidence/college-chatbot-before-after.png) shows six matched pairs. The [results screenshot](docs/evidence/college-chatbot-test-results.png) shows 13 reviewed run records, including one duplicate baseline reply. Raw exports are stored under the Git-ignored `test-data/local/baseline-results/` directory.
+
 See [the Milestone 2 worksheet](docs/milestone-2.md) for submission materials and evidence gaps.
